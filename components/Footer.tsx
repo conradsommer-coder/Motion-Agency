@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Linkedin, Instagram, Mail, Lock } from 'lucide-react';
+import { Instagram, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -8,16 +8,22 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-neutral-950 border-t border-neutral-900 py-20">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-end gap-12">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-end gap-12">
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-bold tracking-tighter mb-2 font-serif text-white">MOTION AGENCY.</h3>
-          <p className="text-neutral-500 text-xs uppercase tracking-widest">{t.footer.location}</p>
+          <h3 className="text-xl font-bold tracking-tighter mb-3 font-serif text-white uppercase">MOTION AGENCY.</h3>
+          <p className="text-neutral-400 text-[10px] uppercase tracking-[0.2em] mb-2 font-medium">Marketing Agency in Cabo San Lucas, Baja California Sur</p>
+          <p className="text-neutral-600 text-[9px] uppercase tracking-[0.3em]">Branding • Digital Advertising • SEO • Sales Systems</p>
         </div>
 
-        <div className="flex space-x-8">
-            <a href="#" className="text-neutral-500 hover:text-white transition-colors transform hover:-translate-y-1 duration-300"><Linkedin size={20} strokeWidth={1.5} /></a>
-            <a href="#" className="text-neutral-500 hover:text-white transition-colors transform hover:-translate-y-1 duration-300"><Instagram size={20} strokeWidth={1.5} /></a>
-            <a href="/contact" className="text-neutral-500 hover:text-white transition-colors transform hover:-translate-y-1 duration-300"><Mail size={20} strokeWidth={1.5} /></a>
+        <div className="flex justify-center">
+            <a 
+              href="https://www.instagram.com/motionagency/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-neutral-500 hover:text-white transition-colors transform hover:-translate-y-1 duration-300"
+            >
+              <Instagram size={20} strokeWidth={1.5} />
+            </a>
         </div>
 
         <div className="text-neutral-600 text-xs text-center md:text-right font-medium flex flex-col items-center md:items-end gap-2">

@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -37,54 +38,46 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: t.nav.services, path: '/services' },
-    { name: t.nav.motionDesigns, path: '/motion-designs' },
     { name: t.nav.about, path: '/about' },
-    { name: t.nav.blog, path: '/blog' },
     { name: t.nav.contact, path: '/contact' },
   ];
 
   // Animations
-  const menuVariants = {
-    initial: { opacity: 0, y: -20 },
+  const menuVariants: Variants = {
+    initial: { opacity: 1 },
     animate: { 
         opacity: 1, 
-        y: 0,
         transition: {
-            duration: 0.4,
-            ease: [0.22, 1, 0.36, 1],
             staggerChildren: 0.1,
-            delayChildren: 0.2
+            delayChildren: 0.1
         }
     },
     exit: { 
         opacity: 0,
-        y: -20,
         transition: {
             duration: 0.3,
-            ease: "easeInOut",
-            staggerChildren: 0.05,
-            staggerDirection: -1
+            ease: "easeInOut"
         }
     }
   };
 
-  const itemVariants = {
-    initial: { opacity: 0, y: 30 },
+  const itemVariants: Variants = {
+    initial: { opacity: 0, y: 20 },
     animate: { 
         opacity: 1, 
         y: 0,
         transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } 
     },
-    exit: { opacity: 0, y: 20 }
+    exit: { opacity: 0, y: 10 }
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-700 cubic-bezier(0.19, 1, 0.22, 1) ${scrolled ? 'glass-nav py-4' : 'bg-transparent py-8'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-out-expo ${isOpen ? 'bg-black py-4' : (scrolled ? 'glass-nav py-4' : 'bg-transparent py-6 md:py-8')}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="z-50 group relative">
+        <Link to="/" className="z-[150] group relative">
              <div className="flex flex-col leading-none">
-                <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-white relative z-10 mix-blend-difference">
+                <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-white relative z-10 uppercase">
                     MOTION AGENCY.
                 </span>
              </div>
@@ -105,22 +98,26 @@ const Navbar: React.FC = () => {
           
           <button 
             onClick={toggleLanguage}
-            className="text-[10px] font-bold text-white border border-neutral-700 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-all duration-300"
+            className="text-[10px] font-bold text-white border border-neutral-800 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-all duration-300"
           >
             {language.toUpperCase()}
           </button>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center gap-6 z-50">
+        <div className="md:hidden flex items-center gap-4 z-[150]">
           <button 
             onClick={toggleLanguage}
-            className="text-xs font-bold text-white mix-blend-difference"
+            className="text-xs font-bold text-white px-2 py-1"
           >
             {language.toUpperCase()}
           </button>
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white hover:opacity-50 transition-opacity mix-blend-difference">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="text-white p-2 hover:opacity-50 transition-opacity"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
@@ -133,7 +130,7 @@ const Navbar: React.FC = () => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="fixed inset-0 bg-neutral-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center"
+                className="fixed inset-0 bg-black z-[140] flex flex-col items-center justify-center w-full h-screen h-[100dvh]"
             >
                 <div className="flex flex-col space-y-8 text-center">
                 {navLinks.map((link) => (
@@ -141,7 +138,7 @@ const Navbar: React.FC = () => {
                         <Link
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className="text-4xl md:text-5xl font-serif text-white hover:text-neutral-500 transition-colors block"
+                        className="text-4xl md:text-5xl font-serif text-white hover:text-neutral-400 transition-colors block"
                         >
                         {link.name}
                         </Link>
@@ -149,10 +146,10 @@ const Navbar: React.FC = () => {
                 ))}
                 </div>
                 
-                <motion.div variants={itemVariants} className="mt-12 pt-12 border-t border-neutral-800 w-40 flex justify-center gap-6">
-                    <div className="w-2 h-2 rounded-full bg-white/20"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/20"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/20"></div>
+                <motion.div variants={itemVariants} className="mt-12 pt-12 border-t border-neutral-100 w-40 flex justify-center gap-6">
+                    <div className="w-2 h-2 rounded-full bg-neutral-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-neutral-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-neutral-200"></div>
                 </motion.div>
             </motion.div>
         )}
