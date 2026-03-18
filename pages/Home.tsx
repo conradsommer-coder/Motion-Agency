@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Search, BarChart3, PenTool, ArrowDown, CheckCircle2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ASSETS } from '../data/assets';
+import SeoHead from '../components/SeoHead';
 
 // High-Contrast Hover Card Component for Expertise
 const ServiceHoverCard = ({ icon: Icon, title, desc, bullets, closing, index }: { icon: any, title: string, desc: string, bullets: string[], closing: string, index: number }) => {
@@ -128,6 +129,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="w-full">
+      <SeoHead route="home" />
       {/* 1. HERO SECTION WITH VIDEO BACKGROUND */}
       <section ref={heroRef} className="h-screen w-full relative flex items-center justify-center overflow-hidden">
         <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
@@ -297,7 +299,7 @@ const Home: React.FC = () => {
                 >
                     <img 
                         src={ASSETS.whoWeWorkWith} 
-                        alt="High-ticket business" 
+                        alt="Aerial view of Cabo San Lucas coastline Baja California Sur where Motion Agency operates"
                         className="w-full h-full object-cover"
                     />
                 </motion.div>

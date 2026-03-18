@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import SeoHead from '../components/SeoHead';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
@@ -13,6 +14,7 @@ const About: React.FC = () => {
 
   return (
     <div className="w-full bg-black text-white pt-40 pb-32 min-h-screen">
+      <SeoHead route="about" />
       <div className="max-w-5xl mx-auto px-6 text-center">
         
         {/* Main Headline */}

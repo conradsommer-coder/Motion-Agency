@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Bot, Search, TrendingUp, ArrowRight, PenTool, Layers, BarChart3, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SeoHead from '../components/SeoHead';
 
 const Services: React.FC = () => {
   const { t, language } = useLanguage();
@@ -100,6 +101,7 @@ const Services: React.FC = () => {
 
   return (
     <div className="w-full pt-40 pb-32 bg-black min-h-screen">
+      <SeoHead route="services" />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="mb-24 md:mb-32">
           <motion.h1 

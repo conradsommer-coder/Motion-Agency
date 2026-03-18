@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Download, Layers, PenTool, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ASSETS } from '../data/assets';
+import SeoHead from '../components/SeoHead';
 
 const MotionDesigns: React.FC = () => {
   const { t } = useLanguage();
@@ -20,6 +21,7 @@ const MotionDesigns: React.FC = () => {
 
   return (
     <div className="w-full bg-neutral-950">
+      <SeoHead route="motionDesigns" />
       {/* Visual Header */}
       <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         {/* Restored Hands on Tablet image with full opacity and dark overlay */}

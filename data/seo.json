@@ -1,0 +1,60 @@
+{
+  "baseUrl": "https://motionagency.mx",
+  "routes": {
+    "home": {
+      "path": "/",
+      "title": "Marketing Agency in Cabo San Lucas | Branding, SEO & Ads | Motion Agency",
+      "description": "Motion Agency is a marketing agency in Cabo San Lucas specializing in branding, digital advertising, SEO, and sales systems designed to help businesses grow with clarity and measurable results.",
+      "canonical": "https://motionagency.mx/",
+      "robots": "index, follow",
+      "ogTitle": "Marketing Agency in Cabo San Lucas | Branding, SEO & Ads | Motion Agency",
+      "ogDescription": "Motion Agency is a marketing agency in Cabo San Lucas specializing in branding, digital advertising, SEO, and sales systems designed to help businesses grow with clarity and measurable results.",
+      "ogType": "website",
+      "twitterCard": "summary_large_image"
+    },
+    "services": {
+      "path": "/services",
+      "title": "Marketing Services | Branding, Sales Systems, SEO & Advertising | Motion Agency",
+      "description": "Explore Motion Agency services including branding, digital advertising, SEO positioning, and sales systems designed to generate qualified leads and long-term growth.",
+      "canonical": "https://motionagency.mx/services",
+      "robots": "index, follow",
+      "ogTitle": "Marketing Services | Branding, Sales Systems, SEO & Advertising | Motion Agency",
+      "ogDescription": "Explore Motion Agency services including branding, digital advertising, SEO positioning, and sales systems designed to generate qualified leads and long-term growth.",
+      "ogType": "website",
+      "twitterCard": "summary_large_image"
+    },
+    "about": {
+      "path": "/about",
+      "title": "About Motion Agency | Marketing & Growth Strategy Agency",
+      "description": "Motion Agency is a growth-focused digital agency that combines branding, advertising, and SEO into a structured system designed to generate measurable business growth.",
+      "canonical": "https://motionagency.mx/about",
+      "robots": "index, follow",
+      "ogTitle": "About Motion Agency | Marketing & Growth Strategy Agency",
+      "ogDescription": "Motion Agency is a growth-focused digital agency that combines branding, advertising, and SEO into a structured system designed to generate measurable business growth.",
+      "ogType": "website",
+      "twitterCard": "summary_large_image"
+    },
+    "contact": {
+      "path": "/contact",
+      "title": "Contact Motion Agency | Marketing Agency in Cabo San Lucas",
+      "description": "Contact Motion Agency to discuss branding, SEO, and digital advertising strategies designed to help your business grow with structured marketing systems.",
+      "canonical": "https://motionagency.mx/contact",
+      "robots": "index, follow",
+      "ogTitle": "Contact Motion Agency | Marketing Agency in Cabo San Lucas",
+      "ogDescription": "Contact Motion Agency to discuss branding, SEO, and digital advertising strategies designed to help your business grow with structured marketing systems.",
+      "ogType": "website",
+      "twitterCard": "summary_large_image"
+    },
+    "motionDesigns": {
+      "path": "/motion-designs",
+      "title": "Motion Designs | Motion Agency",
+      "description": "Explore Motion Agency motion and brand systems for conversion-focused visual experiences.",
+      "canonical": "https://motionagency.mx/motion-designs",
+      "robots": "noindex, nofollow",
+      "ogTitle": "Motion Designs | Motion Agency",
+      "ogDescription": "Explore Motion Agency motion and brand systems for conversion-focused visual experiences.",
+      "ogType": "website",
+      "twitterCard": "summary_large_image"
+    }
+  }
+}

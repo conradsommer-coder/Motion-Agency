@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SeoHead from '../components/SeoHead';
 
 const Contact: React.FC = () => {
   const { t, language } = useLanguage();
@@ -30,6 +31,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="w-full pt-40 pb-32 min-h-screen bg-black">
+      <SeoHead route="contact" />
       <div className="max-w-5xl mx-auto px-6">
         <motion.div 
             initial={{ opacity: 0, y: 20 }}
