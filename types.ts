@@ -1,4 +1,3 @@
-
 export type Language = 'en' | 'es';
 
 export interface BlogPost {
@@ -24,18 +23,25 @@ export interface ServiceDetail {
   title: string;
   description: string;
   features: string[];
-  closingLine?: string;
+}
+
+export interface MotionSubSection {
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
 }
 
 export interface Content {
   nav: {
     services: string;
+    motionDesigns: string;
     about: string;
+    blog: string;
     contact: string;
     cta: string;
   };
   hero: {
-    discreetH1: string;
     headline: string;
     subheadline: string;
     cta: string;
@@ -48,13 +54,25 @@ export interface Content {
     ads: ServiceDetail;
     ecommerce: ServiceDetail;
   };
+  motionDesigns: {
+    hero: {
+      title: string;
+      subtitle: string;
+      intro: string;
+    };
+    branding: MotionSubSection & { idealFor: string };
+    realEstate: MotionSubSection & { seoText: string; cta: string };
+    download: {
+      title: string;
+      subtitle: string;
+      cta: string;
+      success: string;
+    };
+  };
   about: {
     title: string;
-    subheadline: string;
-    body: string[];
-    cta: string;
-    philosophy?: string; 
-    values?: { title: string; desc: string }[];
+    philosophy: string;
+    values: { title: string; desc: string }[];
   };
   contact: {
     title: string;
@@ -68,39 +86,10 @@ export interface Content {
       submit: string;
     };
   };
-  // Adding motionDesigns property to the Content interface
-  motionDesigns: {
-    hero: {
-      title: string;
-      subtitle: string;
-      intro: string;
-    };
-    branding: {
-      title: string;
-      subtitle: string;
-      description: string;
-      idealFor: string;
-      features: string[];
-    };
-    realEstate: {
-      title: string;
-      subtitle: string;
-      description: string;
-      seoText: string;
-      cta: string;
-      features: string[];
-    };
-    download: {
-      title: string;
-      subtitle: string;
-      cta: string;
-      success: string;
-    };
-  };
-  // Adding blog property for localized headers on the Blog index page
   blog: {
     title: string;
     subtitle: string;
+    posts: BlogPost[]; // Keeping this for the static fallback text in content.ts
   };
   footer: {
     rights: string;

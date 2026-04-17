@@ -1,0 +1,18 @@
+{
+  "/(site)/about/page": "app/(site)/about/page.js",
+  "/(site)/blog/[id]/page": "app/(site)/blog/[id]/page.js",
+  "/(site)/blog/page": "app/(site)/blog/page.js",
+  "/(site)/contact/page": "app/(site)/contact/page.js",
+  "/(site)/motion-designs/page": "app/(site)/motion-designs/page.js",
+  "/(site)/page": "app/(site)/page.js",
+  "/(site)/services/page": "app/(site)/services/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/edit/[id]/page": "app/admin/edit/[id]/page.js",
+  "/admin/new/page": "app/admin/new/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/gemini/route": "app/api/gemini/route.js",
+  "/login/page": "app/login/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js"
+}

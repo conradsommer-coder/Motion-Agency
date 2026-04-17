@@ -1,0 +1,18 @@
+{
+  "/(site)/about/page": "/about",
+  "/(site)/blog/[id]/page": "/blog/[id]",
+  "/(site)/blog/page": "/blog",
+  "/(site)/contact/page": "/contact",
+  "/(site)/motion-designs/page": "/motion-designs",
+  "/(site)/page": "/",
+  "/(site)/services/page": "/services",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/edit/[id]/page": "/admin/edit/[id]",
+  "/admin/new/page": "/admin/new",
+  "/admin/page": "/admin",
+  "/api/gemini/route": "/api/gemini",
+  "/login/page": "/login",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

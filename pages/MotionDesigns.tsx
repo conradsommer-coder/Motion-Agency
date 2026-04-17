@@ -3,8 +3,6 @@ import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Download, Layers, PenTool, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ASSETS } from '../data/assets';
-import SeoHead from '../components/SeoHead';
 
 const MotionDesigns: React.FC = () => {
   const { t } = useLanguage();
@@ -21,14 +19,10 @@ const MotionDesigns: React.FC = () => {
 
   return (
     <div className="w-full bg-neutral-950">
-      <SeoHead route="motionDesigns" />
       {/* Visual Header */}
       <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         {/* Restored Hands on Tablet image with full opacity and dark overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center grayscale"
-          style={{ backgroundImage: `url(${ASSETS.motionDesignsHero})` }}
-        ></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center grayscale"></div>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
         

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(site)/layout,_N_T_/(site)/motion-designs/layout,_N_T_/(site)/motion-designs/page,_N_T_/motion-designs"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHNpdGUp/motion-designs/__PAGE__",
+    "/!KHNpdGUp/motion-designs",
+    "/!KHNpdGUp",
+    "/_index",
+    "/_head"
+  ]
+}
